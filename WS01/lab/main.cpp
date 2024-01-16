@@ -10,35 +10,21 @@ Description:
 Revision History
 -----------------------------------------------------------
 Name            Date            Reason       
-Wing Ho Chau    1/15/2024       
+Wing Ho Chau    1/15/2024       Move function to graph.h and graph.cpp
 ***********************************************************************/
 
 
 #include <iostream>
 #include <iomanip>
 #include "io.h"
+#include "graph.h"
 using namespace std;
 
 // Maximum number of samples in an graph
-const int MAX_NO_OF_SAMPLES = 20; 
-const int GRAPH_WIDTH = 65;
-// Fills the samples array with the statistic samples
-void getSamples(int samples[], int noOfSamples);
-// Finds the largest sample in the samples array, if it is larger than 70,
-// therwise it will return 70. 
-int findMax(int samples[], int noOfSamples);
-// Prints a scaled bar relevant to the maximum value in samples array
-void printBar(int val, int max);
-// Prints a graph comparing the sample values visually 
-void printGraph(int samples[], int noOfSamples, const char* label);
-
-
-
+const int MAX_NO_OF_SAMPLES = 20;
 
 // prints samples error message
 void samplesFirst();
-
-
 
 // SeneGraph program
 int main() {
@@ -58,7 +44,7 @@ int main() {
          }
          else {
             cout << "Please enter the sample values: " << endl;
-            getSamples(samples, noOfSamples);
+            graph::getSamples(samples, noOfSamples);
          }
          break;
       case 3:
@@ -69,7 +55,7 @@ int main() {
             cout << "Samples missing. Please enter the sample values!" << endl;
          }
          else {
-            printGraph(samples, noOfSamples, " SeneGraph ");
+            graph::printGraph(samples, noOfSamples, " SeneGraph ");
          }
          break;
       case 0:
@@ -78,54 +64,6 @@ int main() {
       }
    }
    return 0;
-}
-
-
-// prints a graph comparing the sample values visually 
-void printGraph(int samples[], int noOfSamples, const char* label) {
-   int max = findMax(samples, noOfSamples);
-   io::labelLine(GRAPH_WIDTH + 10, label);
-   for (int i = 0; i < noOfSamples; i++) {
-      printBar(samples[i], max);
-   }
-   io::line(GRAPH_WIDTH + 10);
-}
-
-// prints a scaled bar relevant to the maximum value in samples array
-void printBar(int val, int max) {
-   int i;
-   int barlength = GRAPH_WIDTH * val / max;
-   cout << "| ";
-   for (i = 0; i < barlength; i++) {
-      cout << "*";
-   }
-   cout << " ";
-   io::printInt(val, (GRAPH_WIDTH + 6 - barlength));
-   cout << "|" << endl;
-}
-
-// Fills the samples array with the statistic samples
-void getSamples(int samples[], int noOfSamples) {
-   int i;
-   for (i = 0; i < noOfSamples; i++) {
-      io::line(28);
-      cout << "\\ " << (i + 1) << "/";
-      io::printInt(noOfSamples, 2);
-      cout << ":                    /";
-      io::goBack(20);
-      samples[i] = io::getInt(1, 1000000);
-   }
-}
-
-// finds the largest sample in the samples array, if it is larger than GRAPH_WIDTH,
-// otherwise it will return GRAPH_WIDTH. 
-int findMax(int samples[], int noOfSamples){
-  int max = samples[0];
-  int i;
-  for (i = 1; i < noOfSamples; i++){
-    if (max < samples[i]) max = samples[i];
-  }
-  return max < GRAPH_WIDTH ? GRAPH_WIDTH : max;
 }
 
 // prints samples error message
