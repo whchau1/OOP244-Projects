@@ -1,3 +1,21 @@
+/***********************************************************************
+Workshop 1: Compiling modular source code
+File	w1p2.cpp
+Version 1.0
+Author	Fardad Soleimanloo  2241
+Description:
+   This provides some source code in a single file to break
+   into modules and compile together
+
+Revision History
+-----------------------------------------------------------
+Name            Date            Reason
+Wing Ho Chau    1/17/2024
+Senece Email: whchau1@myseneca.ca
+Student ID  : 150924231
+I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+***********************************************************************/
+
 #include <iostream>
 #include "io.h"
 using namespace std;
