@@ -21,7 +21,7 @@ I have done all the coding by myself and only copied the code that my professor 
 
 const int GRAPH_WIDTH = 65;
 
-namespace graph {
+namespace seneca {
 
 	// Fills the samples array with the statistic samples
 	void getSamples(int samples[], int noOfSamples);

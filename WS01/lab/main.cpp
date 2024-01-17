@@ -34,12 +34,12 @@ int main() {
    int noOfSamples = 0;
    int samples[MAX_NO_OF_SAMPLES] = { 0 };
    bool done = false;
-   io::labelLine(33, "Welcome to SeneGraph");
+   seneca::labelLine(33, "Welcome to SeneGraph");
    while (!done) {
-      switch (io::menu(noOfSamples)) {
+      switch (seneca::menu(noOfSamples)) {
       case 1:
          cout << "Enter number of available samples: ";
-         noOfSamples = io::getInt(1, MAX_NO_OF_SAMPLES);
+         noOfSamples = seneca::getInt(1, MAX_NO_OF_SAMPLES);
          break;
       case 2:
          if (noOfSamples == 0) {
@@ -47,7 +47,7 @@ int main() {
          }
          else {
             cout << "Please enter the sample values: " << endl;
-            graph::getSamples(samples, noOfSamples);
+            seneca::getSamples(samples, noOfSamples);
          }
          break;
       case 3:
@@ -58,7 +58,7 @@ int main() {
             cout << "Samples missing. Please enter the sample values!" << endl;
          }
          else {
-            graph::printGraph(samples, noOfSamples, " SeneGraph ");
+            seneca::printGraph(samples, noOfSamples, " SeneGraph ");
          }
          break;
       case 0:

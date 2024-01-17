@@ -22,18 +22,18 @@ I have done all the coding by myself and only copied the code that my professor 
 
 using namespace std;
 
-namespace graph {
+namespace seneca {
 
     // Fills the samples array with the statistic samples
     void getSamples(int samples[], int noOfSamples) {
         int i;
         for (i = 0; i < noOfSamples; i++) {
-            io::line(28);
+            line(28);
             cout << "\\ " << (i + 1) << "/";
-            io::printInt(noOfSamples, 2);
+            printInt(noOfSamples, 2);
             cout << ":                    /";
-            io::goBack(20);
-            samples[i] = io::getInt(1, 1000000);
+            goBack(20);
+            samples[i] = getInt(1, 1000000);
         }
     }
 
@@ -57,17 +57,17 @@ namespace graph {
             cout << "*";
         }
         cout << " ";
-        io::printInt(val, (GRAPH_WIDTH + 6 - barlength));
+        printInt(val, (GRAPH_WIDTH + 6 - barlength));
         cout << "|" << endl;
     }
 
     // prints a graph comparing the sample values visually 
     void printGraph(int samples[], int noOfSamples, const char* label) {
         int max = findMax(samples, noOfSamples);
-        io::labelLine(GRAPH_WIDTH + 10, label);
+        labelLine(GRAPH_WIDTH + 10, label);
         for (int i = 0; i < noOfSamples; i++) {
             printBar(samples[i], max);
         }
-        io::line(GRAPH_WIDTH + 10);
+        line(GRAPH_WIDTH + 10);
     }
 }

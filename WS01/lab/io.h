@@ -19,7 +19,7 @@ I have done all the coding by myself and only copied the code that my professor 
 #ifndef IO_H
 #define IO_H
 
-namespace io {
+namespace seneca {
 
 	// prints the int value in width of fieldWidth
 	void printInt(int value, int fieldWidth);
