@@ -11,6 +11,8 @@ Name            Date            Reason
 ***********************************************************************/
 #ifndef SENECA_STMARK_H
 #define SENECA_STMARK_H
+#define MAX_MARK_GROUP 10
+
 namespace seneca {
 
    /// <summary>
@@ -21,6 +23,19 @@ namespace seneca {
       char surname[31];
       int mark;
    };
+
+   /// <summary>
+   /// Tries to open the students' mark data file. 
+   /// If successful it will print a report based on the 
+   /// date in the file.
+   /// </summary>
+   /// <param name="filename">, holds the data file name</param>
+   /// <returns>True if the date files is opened succesfully, 
+   /// otherwise returns false</returns>
+   bool printReport(const char* filename);
+
+   //Count all the mark into 10 groups
+   void countMark(const StMark stMark[], const int noOfRecord, int* group);
 
 }
 #endif // !SENECA_STMARK_H
