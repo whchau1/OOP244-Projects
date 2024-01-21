@@ -10,15 +10,22 @@ namespace seneca {
 	bool printReport(const char* filename) {
 		StMark m[MAX_NO_RECS];
 		int recordsRead{}, marksGroup[MAX_MARK_GROUP]{};
+		bool fileStatus;
 
-		if (openFile(filename)) {
+		if (fileStatus = openFile(filename)) {
 			recordsRead = readMarks(m);
 
 			countMark(m, recordsRead, marksGroup);
 			printGraph(marksGroup, MAX_MARK_GROUP, "Students' mark distribution");
 			
 		}
-		return openFile(filename);
+
+		/*for (int i = 0; i < recordsRead; i++) {
+			cout << (i + 1) << ": " << m[i].name << " " << m[i].surname << " [" << m[i].mark << "]" << endl;
+		}*/
+
+		closeFile();
+		return fileStatus;
 	}
 
 	//Count all the mark into 10 groups

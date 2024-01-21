@@ -64,10 +64,11 @@ namespace seneca {
     // prints a graph comparing the sample values visually 
     void printGraph(int samples[], int noOfSamples, const char* label) {
         int max = findMax(samples, noOfSamples);
-        labelLine(GRAPH_WIDTH + 10, label);
+        labelLine(GRAPH_WIDTH + 13, label);
         for (int i = 0; i < noOfSamples; i++) {
+            printInt(100 - i * 10, 3);
             printBar(samples[i], max);
         }
-        line(GRAPH_WIDTH + 10);
+        line(GRAPH_WIDTH + 13);
     }
 }

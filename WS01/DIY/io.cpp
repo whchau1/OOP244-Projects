@@ -30,7 +30,7 @@ namespace seneca {
 		}
 	}
 
-	// erturns number of digits in an integer
+	// returns number of digits in an integer
 	int intDigits(int value) {
 		int count = (value == 0);
 		while (value != 0) {
