@@ -37,6 +37,9 @@ namespace seneca {
    //Count all the mark into 10 groups
    void countMark(const StMark stMark[], const int noOfRecord, int* group);
 
+   //Sort the marks in descending order
+   void sortMark(StMark* StMark, int noOfRecord);
+
 }
 #endif // !SENECA_STMARK_H
 
