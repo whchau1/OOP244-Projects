@@ -1,16 +1,14 @@
 /***********************************************************************
-Workshop 1: Compiling modular source code
-File	w1p2.cpp
+OOP244 Workshop # p2:
 Version 1.0
-Author	Fardad Soleimanloo  2241
-Description:
-   This provides some source code in a single file to break
-   into modules and compile together
-
+Date	   winter 2024
+Author	Fardad Soleimanloo
+Description
+  tests the file module of workshop 1 part 2(DIY)
 Revision History
 -----------------------------------------------------------
 Name            Date            Reason
-Wing Ho Chau    1/17/2024
+Wing Ho Chau
 Senece Email: whchau1@myseneca.ca
 Student ID  : 150924231
 I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.

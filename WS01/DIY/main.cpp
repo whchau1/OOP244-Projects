@@ -1,17 +1,17 @@
 /***********************************************************************
-// Workshop 1 # p2: tester program
-//
-// File	main.cpp
-// Version 1.0
-// Date	 winter 2024
-// Author Fardad Soleimanloo
-// Description
-//
-// Revision History
-// -----------------------------------------------------------
-// Name            Date            Reason
-//
-/////////////////////////////////////////////////////////////////
+OOP244 Workshop # p2:
+Version 1.0
+Date	   winter 2024
+Author	Fardad Soleimanloo
+Description
+  tests the file module of workshop 1 part 2(DIY)
+Revision History
+-----------------------------------------------------------
+Name            Date            Reason
+Wing Ho Chau
+Senece Email: whchau1@myseneca.ca
+Student ID  : 150924231
+I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
 ***********************************************************************/
 #include <iostream>
 #include "StMark.h"
