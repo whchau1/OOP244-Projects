@@ -1,0 +1,21 @@
+/***********************************************************************
+OOP244 Workshop # p2:
+Version 1.0
+Date	   winter 2024
+Author	Fardad Soleimanloo
+Description
+  tests the file module of workshop 1 part 2(DIY)
+Revision History
+-----------------------------------------------------------
+Name            Date            Reason
+Wing Ho Chau
+Senece Email: whchau1@myseneca.ca
+Student ID  : 150924231
+I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+***********************************************************************/
+
+At part 1, I have learned safer way to create header and module. First, 'namespace' is help us to prevent naming conflicts. Different developer may use same variable name or function name in a big project. 'namespace' can scoping the block of code in it. To access a variable or function within namespace, we use the namespace's name followed by double colon. Second, '#ifndef' and '#endif' is helping reduce redundancy of the code. Since every module is compiled separately and then linked together, some .cpp file need to include others header file they need to use. When they link together, some module header files may included more than once. '#ifndef' can help to prevent multi-inclusion.
+
+At part 2, most of the thing are mentioned in IPC144, such as modulus, functions, parameters, passing by value, passing by address, and array etc.. One of the new thing that I have learned is a new data type boolean, bool. It stores a value true as 1 and false as 0. Also, 'cout' is the other new thing. It is same as the printf() in C, but it does not require format specificer. I believe it is something about the overloading behind in the 'iostream' bulit-in function. Overloading is talking about a function with same name but having differnt parameter, the function can be regonlized itself based on the given parameter qulity or type of the data to perform different task. It is useful.
+
+The major issue is that it takes me a long time to understand what the code is saying or doing. Sometimes is about the arithmetic. I have to walk through whole code before I do anything.
