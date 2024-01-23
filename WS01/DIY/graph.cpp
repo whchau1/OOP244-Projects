@@ -50,7 +50,7 @@ namespace seneca {
     void printBar(int val, int max) {
         int i;
         int barlength = GRAPH_WIDTH * val / max;
-        cout << "| ";
+        cout << " | ";
         for (i = 0; i < barlength; i++) {
             cout << "*";
         }
@@ -62,11 +62,11 @@ namespace seneca {
     // prints a graph comparing the sample values visually 
     void printGraph(int samples[], int noOfSamples, const char* label) {
         int max = findMax(samples, noOfSamples);
-        labelLine(GRAPH_WIDTH + 13, label);
+        labelLine(GRAPH_WIDTH + 14, label);
         for (int i = 0; i < noOfSamples; i++) {
             printInt(100 - i * 10, 3);
             printBar(samples[i], max);
         }
-        line(GRAPH_WIDTH + 13);
+        line(GRAPH_WIDTH + 14);
     }
 }

@@ -45,6 +45,9 @@ namespace seneca {
    //Sort the marks in descending order
    void sortMark(StMark* StMark, int noOfRecord);
 
+   //print a line without '+'
+   void divider(int n);
+
 }
 #endif // !SENECA_STMARK_H
 

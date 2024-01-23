@@ -41,9 +41,9 @@ namespace seneca {
 				printInt(i + 1, 3);
 				cout << ": [";
 				printInt(m[i].mark, 3);
-				cout << "]" << m[i].name << " " << m[i].surname << endl;
+				cout << "] " << m[i].name << " " << m[i].surname << endl;
 			}
-			line(40);
+			divider(40);
 		}
 
 		closeFile();
@@ -63,7 +63,7 @@ namespace seneca {
 	}
 
 	//Sort the marks in descending order
-	void sortMark(StMark* m, int noOfRecord) {
+	void sortMark(StMark* m, const int noOfRecord) {
 		StMark swap{};
 		for (int i = 0; i < noOfRecord; i++) {
 			for (int j = 0; j < noOfRecord - i - 1; j++) {
@@ -74,6 +74,14 @@ namespace seneca {
 				}
 			}
 		}
+	}
+
+	//print a line without '+'
+	void divider(int n) {
+		for (int i = 0; i < n; i++) {
+			cout << '-';
+		}
+		cout << endl;
 	}
 
 }
