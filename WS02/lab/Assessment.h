@@ -36,10 +36,13 @@ namespace seneca {
 	//Skips a comma and then reads a cstring no longer than 60 characters from the fptr file into the address, cstr and returns true if it was successful, otherwise, it will return false
 	bool read(char* cstr, FILE* fptr);
 
+	//Read a double value for the mark and a string for the title into a temporary local double variable and a 60-character lone cString (+1 for null).
 	bool read(Assessment& assess, FILE* fptr);
 
+	//Release memory
 	void freeMem(Assessment*& aptr, int size);
 
+	//	//Allocate memory to Assessment struct and read the data in file for the members
 	int read(Assessment*& aptr, FILE* fptr);
 }
 

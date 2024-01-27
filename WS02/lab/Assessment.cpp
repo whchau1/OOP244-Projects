@@ -88,8 +88,9 @@ namespace seneca {
 		delete[] aptr;
 	}
 
+	//Allocate memory to Assessment struct and read the data in file for the members
 	int read(Assessment*& aptr, FILE* fptr) {
-		int nOfRecord{}, readStatus = 1, i{};
+		int nOfRecord{}, i{};
 		
 		//Read the first integer to define how many record is going to read
 		if (read(nOfRecord, fptr)) {
