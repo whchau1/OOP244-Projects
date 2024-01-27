@@ -1,2 +1,4 @@
 ﻿  Assessment.cpp
+C:\Users\dicky\OneDrive\桌面\Seneca\Semester_2\OOP244\Workshops\OOP244-Works\WS02\lab\Assessment.cpp(46,18): warning C4806: '==': unsafe operation: no value of type 'bool' promoted to type 'int' can equal the given constant
+C:\Users\dicky\OneDrive\桌面\Seneca\Semester_2\OOP244\Workshops\OOP244-Works\WS02\lab\Assessment.cpp(65,18): warning C4806: '==': unsafe operation: no value of type 'bool' promoted to type 'int' can equal the given constant
   lab.vcxproj -> C:\Users\dicky\OneDrive\桌面\Seneca\Semester_2\OOP244\Workshops\OOP244-Works\WS02\lab\x64\Debug\lab.exe

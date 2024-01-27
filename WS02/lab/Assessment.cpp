@@ -28,7 +28,7 @@ namespace seneca {
 		bool status{};
 
 		if (fptr != NULL) {
-			status = fscanf(fptr, "%d", &value);
+			status = fscanf(fptr, "%d\n", &value) == 1;
 		}
 
 		return status;
@@ -39,7 +39,7 @@ namespace seneca {
 		bool status{};
 
 		if (fptr != NULL) {
-			status = fscanf(fptr, "%lf", &value);
+			status = fscanf(fptr, "%lf", &value) == 1;
 		}
 
 		return status;
@@ -50,12 +50,13 @@ namespace seneca {
 		bool status{};
 
 		if (fptr != NULL) {
-			status = fscanf(fptr, ",%60[^\n]\n", cstr);
+			status = fscanf(fptr, ",%60[^\n]\n", cstr) == 1;
 		}
 
 		return status;
 	}
 
+	//Read a double value for the mark and a string for the title into a temporary local double variable and a 60-character lone cString (+1 for null).
 	bool read(Assessment& assess, FILE* fptr) {
 		double tempMark{};
 		char tempTitle[61]{};
@@ -64,9 +65,11 @@ namespace seneca {
 		if (fptr != NULL) {
 			if (read(tempMark, fptr) == 1 && read(tempTitle, fptr) == 1) {
 
+				//Allcate memory
 				assess.m_mark = new double;
 				assess.m_title = new char[strlen(tempTitle) + 1];
 
+				//Copy the value to struct
 				*assess.m_mark = tempMark;
 				strcpy(assess.m_title, tempTitle);
 				status = true;
@@ -76,6 +79,7 @@ namespace seneca {
 		return status;
 	}
 
+	//Release memory
 	void freeMem(Assessment*& aptr, int size) {
 		for (int i = 0; i < size; i++) {
 			delete aptr[i].m_mark;
@@ -89,13 +93,11 @@ namespace seneca {
 		
 		//Read the first integer to define how many record is going to read
 		if (read(nOfRecord, fptr)) {
+
 			aptr = new Assessment[nOfRecord]; //Allocate memory
-			for (; i < nOfRecord && readStatus; i++) {
-				readStatus = read(aptr[i], fptr);
-				//printf("%.2lf, %s\n", *aptr[i].m_mark, aptr[i].m_title);
-			}
+			for (; i < nOfRecord && read(aptr[i], fptr); i++) {}
 			if (nOfRecord != i) {
-				freeMem(aptr, nOfRecord);
+				freeMem(aptr, i);
 				i = 0;
 			}
 		}
