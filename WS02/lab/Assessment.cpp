@@ -89,7 +89,7 @@ namespace seneca {
 	}
 
 	//Allocate memory to Assessment struct and read the data in file for the members
-	int read(Assessment*& aptr, FILE* fptr) {
+	int read(Assessment* & aptr, FILE* fptr) {
 		int nOfRecord{}, i{};
 		
 		//Read the first integer to define how many record is going to read

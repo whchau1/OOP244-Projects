@@ -83,6 +83,8 @@ bool readTesters() {
       cout << "bool read(double& value, FILE* fptr) test failed" << endl;
       passed = false;
    }
+  
+   //read(Assessment* &aptr =str, FILE * fptr=fptr)
    if(passed && read(str, fptr) && strcmp(str, "Applied Problem Solving") == 0)  {
       cout << "bool read(double& value, FILE* fptr) test passed" << endl;
    } 
