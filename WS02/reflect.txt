@@ -1,0 +1,21 @@
+/***********************************************************************
+// OOP244 Workshop #02 p2: tester program
+//
+// File	main.cpp
+// Version 1.0
+// Date: September 25, 2023
+// Author: Yosef Ashibani, Fardad Soleimanloo
+// Description
+//
+// Revision History
+// -----------------------------------------------------------
+// Name            Date            Reason
+//Wing Ho Chau
+//Senece Email: whchau1@myseneca.ca
+//Student ID  : 150924231
+//I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+/////////////////////////////////////////////////////////////////
+***********************************************************************/
+
+In this workshop, I learned and practiced allocating dynamic memories. Using dynamic memory can help us use the memory more efficiently. The string or the value can store the size we need, unlike static memory, which wastes memory. To allocate memory, we need to create a pointer. Then, use a 'new' keyword to assign the type and size of the memory we need. We need to check that the pointer doesn't contain any address before we do the allocation. It will have memory leaks if we allocate the memory to it again. To do deallocation, we use the keyword 'delete' followed by a pointer that we want to free to memory. 'delete' only deallocates a single address. For contiguous memory, we add a square bracket behind 'delete', like delete[], to do it.
+Workshop DIY part has limited instruction, I have to test the program again and again to get the required result. I found the debug tool to be super useful. It can lead us to run the program step by step to find out where the error occurs. Also, it makes our minds clear when go through the steps.
