@@ -1,0 +1,14 @@
+/***********************************************************************
+// OOP244 Workshop #4 p2: reflection
+//
+// Revision History
+// -----------------------------------------------------------
+// Name            Date            Reason
+// Seneca Email: whchau1@myseneca.ca
+// Seneca ID: 150924231
+// I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+/////////////////////////////////////////////////////////////////
+***********************************************************************/
+
+In this workshop, I have learned constructor and destructor. Constructor is a mechanism to initialize the members at creation-time. It can help us set the default value we want automatically when we declare an object. Most of the time, we set all object members to safe empty state to remove garbage values inside uninitialized members. It can help us prevent the error of using uninitialized members. We also can overload the constructor with different parameters to initialize the member value we want. The constructor will run every time we declare an object. A destructor is also a mechanism that will call automatically before the object goes out of its scope. It is different from the constructor that the destructor cannot be overloaded. It is useful when we need to use dynamic memories. The constructor and destructor cannot be called explicitly.
+Meanwhile, I have a clearer concept of how to design member functions, like queries and modifiers.
