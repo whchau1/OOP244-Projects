@@ -9,6 +9,10 @@
 // Revision History
 // -----------------------------------------------------------
 // Name                 Date            Reason
+// Wing Ho Chau
+// Seneca Email: whchau1@myseneca.ca
+// Seneca ID: 150924231
+// I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
 ***********************************************************************/
 #pragma once
 #ifndef SENECA_BANKACCOUNT_H_
@@ -19,6 +23,10 @@
 namespace seneca
 {
    const int	 ACCT_MAXLEN_USER = 16;					// Max Length of user name
+   const double CHECKING_TRANSACTION_FEE = 1.25;
+   const double SAVINGS_TRANSACTION_FEE = 3.50;
+   const double CHECKING_INTREST = 0.005;
+   const double SAVINGS_INTREST = 0.025;
 
    // Class Definition
    class bankAccount
@@ -38,10 +46,25 @@ namespace seneca
 
       // ADD: Type Conversion, Unary, Binary Operators & Additional Methods
       // ...
+      operator bool() const;
+      operator double() const;
+      bankAccount& operator++();
+      bankAccount& operator--();
+      bool operator+= (double);
+      bool operator-= (double);
+      bool operator== (const bankAccount&) const;
+      bool operator> (double) const;
+      bool operator<= (double) const;
+      bool operator<<(bankAccount&);
+      void display(void) const;
+
+      void print(double oldFunds);
    };
 
    // ADD: Global helpers
    // ...
+   bool operator> (double lhs, const bankAccount& rhs);
+   bool operator<= (double lhs, const bankAccount& rhs);
 }
 #endif
 
