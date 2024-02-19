@@ -1,0 +1,15 @@
+/***********************************************************************
+// OOP244 Workshop #5 p2: tester program
+//
+// File	reflect.txt
+// -----------------------------------------------------------
+// Name            Date            Reason
+// Wing Ho Chau
+// Seneca Email: whchau1@myseneca.ca
+// Seneca ID: 150924231
+// I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+/////////////////////////////////////////////////////////////////
+***********************************************************************/
+In this workshop, I have learned member operators and helper functions. For member operators, I saw there are two types. One type is overloading the symbol, and the other one is about type conversion. Overloading a symbol can be unary operator, binary operator, assignment operator, relational operator, logical operator, and insertion and extraction operator. Member operator can let us define another usage of the symbol other than the default meaning. A member operator can be with side effects and without side effects. The meaning of without side effect is that the value of left operand and right operand will not be changed. A changed value will pass through return. On the other hand, the member operator with side effects is the left operand and right operand either one of them has changed. For the type conversion, it helps convert the object to other type we need. We can define the conversion and use it implicitly.
+Helper function is the function that defined out side of the class. It can access the public member in the class the perform the function. We usually define a helper function when the function cannot be a member.
+I am still getting used to the member operator.
