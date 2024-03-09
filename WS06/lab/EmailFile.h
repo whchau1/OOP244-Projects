@@ -10,7 +10,10 @@
 // Revision History
 // -----------------------------------------------------------
 // Name            Date            Reason
-//
+// Wing Ho Chau
+// Seneca Email: whchau1@myseneca.ca
+// Seneca ID: 150924231
+// I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
 /////////////////////////////////////////////////////////////////
 ***********************************************************************/
 #ifndef SENECA_EMAILFILE_H
@@ -32,9 +35,9 @@ namespace seneca{
 		bool load(std::ifstream& in);
 		~Email();
 		// Prohibit the copy constructor for this class: 
-
+		Email(const Email& copy) = delete;
 		// Make the EmailFile class a "friend" of the Email class
-
+		friend class EmailFile;
 	};
 
 	
@@ -46,10 +49,21 @@ namespace seneca{
 		void setFilename(const char* filename);
 		void setEmpty();
 		bool setNoOfEmails();
-		
+		void loadEmails();
+		operator bool()const;
 	public:
 		
 		std::ostream& view(std::ostream& ostr) const;
+
+		EmailFile() {};
+		EmailFile(const char* filename);
+		EmailFile(const EmailFile& rhs);
+		~EmailFile();
+
+		EmailFile& operator=(const EmailFile& rhs);
+		bool saveToFile(const char* filename) const;
+		void fileCat(const EmailFile& obj, const char* name = nullptr);
+
 	};
 
 	std::ostream& operator<<(std::ostream& ostr, const EmailFile& text);
