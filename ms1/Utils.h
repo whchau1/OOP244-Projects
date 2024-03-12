@@ -8,6 +8,7 @@
 // Revision History
 // -----------------------------------------------------------
 // Name                 Date            Reason
+// Wing Ho Chau
 ***********************************************************************/
 #ifndef SENECA_UTILS_H_
 #define SENECA_UTILS_H_
@@ -41,6 +42,7 @@ namespace seneca {
       /// <returns>the current time in minutes</returns>
       int getTime(); // returns the time of day in minutes
 
+      
      
    };
 
