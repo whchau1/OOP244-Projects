@@ -8,6 +8,7 @@ Revision History
 -----------------------------------------------------------
 Date      Reason
 2024/3/10 Start attempt 1
+2024/3/13 Add const key words in Menu.cpp and default constructor
 -----------------------------------------------------------
 I have done all the coding by myself and only copied the code
 that my professor provided to complete my workshops and assignments.
@@ -19,13 +20,13 @@ that my professor provided to complete my workshops and assignments.
 
 namespace seneca{
 
-	void Menu::printIndent(){
+	void Menu::printIndent() const{
 		for (int i = 0; i < m_noOfTab * 3; i++) {
 			cout << ' ';
 		}
 	}
 
-	int Menu::getSelection(){
+	int Menu::getSelection() const{
 		char buffer[10]{};
 		int noAlpha{}, noSpace{}, noInt{};
 		int selection = -1;
@@ -83,7 +84,7 @@ namespace seneca{
 		delete[] m_text;
 	}
 
-	ostream& Menu::display(){
+	ostream& Menu::display() const{
 		printIndent();
 		for (int i = 0; m_text[i] != '\0'; i++) {
 			cout << m_text[i];
@@ -100,7 +101,7 @@ namespace seneca{
 		return cout;
 	}
 
-	int& Menu::operator>>(int& Selection){
+	int& Menu::operator>>(int& Selection) const{
 		display();
 		Selection = getSelection();
 

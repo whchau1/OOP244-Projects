@@ -8,6 +8,7 @@ Revision History
 -----------------------------------------------------------
 Date      Reason
 2024/3/10 Start attempt 1
+2024/3/13 Add const key words in Menu.cpp and default constructor
 -----------------------------------------------------------
 I have done all the coding by myself and only copied the code
 that my professor provided to complete my workshops and assignments.
@@ -22,16 +23,18 @@ namespace seneca {
 		char* m_text{};
 		int m_noOfOpt{};
 		int m_noOfTab{};
-		void printIndent();
-		int getSelection();
+		void printIndent() const;
+		int getSelection() const;
 	public:
 		Menu(const char* menuContent, int numberOfTabs = 0);
 		Menu(const Menu& menu) = delete;
-		~Menu();
+		virtual ~Menu();
 		
 		Menu& operator=(const Menu& menu) = delete;
-		ostream& display();
-		int& operator>>(int& Selection);
+		ostream& display() const;
+		int& operator>>(int& Selection) const;
+
+		
 	};
 }
 

@@ -8,6 +8,7 @@ Revision History
 -----------------------------------------------------------
 Date      Reason
 2024/3/10 Start attempt 1
+2024/3/13 Add const key words in Menu.cpp and default constructor
 -----------------------------------------------------------
 I have done all the coding by myself and only copied the code
 that my professor provided to complete my workshops and assignments.
@@ -22,6 +23,7 @@ namespace seneca{
 		size_t m_mins{};
 	public:
 		Time(unsigned int min = 0u);
+		virtual ~Time() = default;
 
 		Time& reset();
 		ostream& write(ostream& os) const;
