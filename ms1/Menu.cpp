@@ -103,8 +103,7 @@ namespace seneca{
 
 	int& Menu::operator>>(int& Selection) const{
 		display();
-		Selection = getSelection();
 
-		return Selection;
+		return Selection = getSelection();
 	}
 }
