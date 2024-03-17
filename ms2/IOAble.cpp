@@ -2,9 +2,12 @@
 /*Final Project Milestone 2
 Module: IOAble
 Filename: IOAble.cpp
+Version 1.0
+Author   Wing Ho Chau
 Revision History
 -----------------------------------------------------------
 Date      Reason
+2024/3/17 First attempt
 -----------------------------------------------------------
 I have done all the coding by myself and only copied the code
 that my professor provided to complete my workshops and assignments.
@@ -13,12 +16,13 @@ that my professor provided to complete my workshops and assignments.
 
 namespace seneca {
 
-	ostream& seneca::operator<<(ostream& os, IOAble io) {
+	ostream& operator<<(ostream& os, const IOAble& io) {
 		return io.write(os);
 	}
 
-	istream& operator>>(istream& is, IOAble io){
+	istream& operator>>(istream& is, IOAble& io) {
 		return io.read(is);
 	}
+
 
 }
