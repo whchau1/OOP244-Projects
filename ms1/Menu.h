@@ -1,9 +1,8 @@
-/* Citation and Sources...
-Final Project Milestone 1
+/*Final Project Milestone 1
 Module: Menu
 Filename: Menu.h
 Version 1.0
-Author   John Doe
+Author   Wing Ho Chau
 Revision History
 -----------------------------------------------------------
 Date      Reason
@@ -19,6 +18,7 @@ that my professor provided to complete my workshops and assignments.
 using namespace std;
 
 namespace seneca {
+
 	class Menu {
 		char* m_text{};
 		int m_noOfOpt{};

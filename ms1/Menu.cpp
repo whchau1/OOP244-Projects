@@ -1,9 +1,8 @@
-/* Citation and Sources...
-Final Project Milestone 1
+/*Final Project Milestone 1
 Module: Menu
 Filename: Menu.cpp
 Version 1.0
-Author   John Doe
+Author   Wing Ho Chau
 Revision History
 -----------------------------------------------------------
 Date      Reason
