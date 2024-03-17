@@ -28,6 +28,8 @@ namespace seneca{
 		void writeCurrency(ostream& out, double amount) const;
 	public:
 		BankAccount(const char* name, Date openDate, DepositInfo depInfo, double balance);
+		virtual ~BankAccount() = default;
+
 		ostream& write(ostream& out) const;
 		istream& read(istream& in);
 	};

@@ -21,6 +21,8 @@ namespace seneca {
 		void writeInterest(ostream& out) const;
 	public:
 		SavingsAccount(const char* name, Date openDate, DepositInfo depInfo, double balance, double interest, Date interestDate);
+		virtual ~SavingsAccount() = default;
+
 		void applyInterest(Date& dt);
 		ostream& write(ostream& out) const;
 		istream& read(istream& in);
