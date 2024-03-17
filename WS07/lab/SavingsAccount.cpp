@@ -23,20 +23,22 @@ namespace seneca {
 		: BankAccount(name, openDate, depInfo, balance), m_interest(interest), m_interestDate(interestDate) {}
 
 	void SavingsAccount::applyInterest(Date& dt) {
-		double oldBalance = getbalance();
+		double balance = getbalance();
 
 		cout << "   ";
 		cout.setf(ios::fixed);
 		cout.precision(2);
-		writeCurrency(cout, oldBalance);	//write current balance
+		writeCurrency(cout, balance);	//write current balance
 		cout << " + ";
-		writeCurrency(cout, oldBalance * m_interest);	//write interest amount
+		writeCurrency(cout, balance * m_interest);	//write interest amount
 		cout << " (";
 		writeInterest(cout);	//write interest rate
-		setBalance(oldBalance *= 1 + m_interest);	
+		setBalance(balance *= 1 + m_interest);	
 		cout.setf(ios::fixed);
 		cout.precision(2);
-		cout << ") = " << getbalance() << " | ";	//write new balance with interest applied
+		cout << ") = ";
+		writeCurrency(cout, balance);
+		cout << " | ";	//write new balance with interest applied
 		m_interestDate.write(cout);		//write last date interest was applied
 		m_interestDate = dt;	//update interest date
 		cout << " => ";
