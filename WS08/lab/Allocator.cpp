@@ -9,7 +9,7 @@
 // This file allocates an Account object in dynamic memory
 // -----------------------------------------------------------
 // Name            Date            Reason
-//
+// 
 ***********************************************************************/
 #include "SavingsAccount.h" 
 #include "ChequingAccount.h" 

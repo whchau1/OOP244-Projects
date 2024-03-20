@@ -4,10 +4,10 @@
 // File: ChequingAccount.cpp
 // Version 1.0
 // Date:
-// Author: 
+// Author: Wing Ho Chau
 // Description
 // This file implements the ChequingAccount class
 // -----------------------------------------------------------
 // Name            Date            Reason
-//
+// 
 ***********************************************************************/
