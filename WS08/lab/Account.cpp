@@ -26,20 +26,18 @@ namespace seneca {
 	}
 
 	bool Account::credit(const double amount) {
-		bool status{};
-		if (amount > 0.0) {
+		bool status = amount > 0.0;
+		if (status) {
 			m_balance += amount;
-			status = 1;
 		}
 
 		return status;
 	}
 
 	bool Account::debit(double amount) {
-		bool status{};
-		if (amount > 0.0) {
+		bool status = amount > 0.0;
+		if (status) {
 			m_balance -= amount;
-			status = 1;
 		}
 
 		return status;

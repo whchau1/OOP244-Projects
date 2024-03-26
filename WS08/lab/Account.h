@@ -22,7 +22,7 @@ namespace seneca {
 	protected:
 		double balance() const;
 	public:
-		Account(double balance = 0.0);
+		Account(double balance);
 		virtual ~Account() = default;
 		bool credit(double amount);
 		bool debit(double amount);

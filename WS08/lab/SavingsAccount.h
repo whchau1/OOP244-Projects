@@ -20,9 +20,10 @@ namespace seneca {
 	class SavingsAccount : public Account{
 		double m_interestRate{};
 	public:
-		SavingsAccount(double balance, double rate = 0.0);
+		SavingsAccount(double balance, double rate);
 		void monthEnd();
-		void display(std::ostream& os) const;
+		void display(std::ostream& out) const;
+		virtual ~SavingsAccount() = default;
 	};
 
 }

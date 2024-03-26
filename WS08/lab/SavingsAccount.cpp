@@ -9,14 +9,14 @@
 // This file implements the SavingsAccount class
 // -----------------------------------------------------------
 // Name            Date            Reason
-// 
+//
 ***********************************************************************/
 #include "SavingsAccount.h"
 using namespace std;
 
 namespace seneca {
 
-	SavingsAccount::SavingsAccount(double balance, double rate):Account(balance) {
+	SavingsAccount::SavingsAccount(double balance, double rate) :Account(balance) {
 		if (rate > 0.0) {
 			m_interestRate = rate;
 		}
@@ -27,10 +27,12 @@ namespace seneca {
 		credit(currentBalance *= m_interestRate);
 	}
 
-	void SavingsAccount::display(std::ostream& os) const {
-		os << "Account type: Savings" << endl << "Balance: $";
-		os.setf(ios::fixed);
-		os.precision(2);
-		os << balance() << endl << "Interest Rate (%): " << m_interestRate << endl;
+	void SavingsAccount::display(std::ostream& out) const {
+		out << "Account type: Savings" << endl 
+			<< "Balance: $";
+		out.setf(ios::fixed);
+		out.precision(2);
+		out << balance() << endl 
+			<< "Interest Rate (%): " << m_interestRate * 100 << endl;
 	}
 }

@@ -25,6 +25,7 @@ namespace seneca {
 		virtual void display(std::ostream&) const = 0;
 		virtual ~iAccount() = default;
 	};
+	iAccount* CreateAccount(const char*, double);
 
 }
 

@@ -20,7 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Account.cpp" />
-    <ClCompile Include="allocator.cpp" />
+    <ClCompile Include="Allocator.cpp" />
     <ClCompile Include="ChequingAccount.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SavingsAccount.cpp" />
