@@ -19,14 +19,20 @@ using namespace std;
 
 namespace seneca {
 
-	const int MAX_PATIENT_NAME = 50;
-	const int MIN_OHIPNUMBER = 100000000;
-	const int MAX_OHIPNUMBER = 999999999;
+	const int MAX_PATIENT_NAME = 50;  //Maximum length of patient name 
+	const int MIN_OHIPNUMBER = 100000000;  //Minumum number of OHIP number
+	const int MAX_OHIPNUMBER = 999999999;  //Maximum number of OHIP number
 
 	class Patient : public IOAble{
-		char* m_name{};
-		int m_OHIP{};
-		Ticket m_ticket;
+		char* m_name{};  //Store patient name dynamically.
+		int m_OHIP{};  //OHIP number
+		Ticket m_ticket; //Ticket number and issue time
+
+		/// <summary>
+		/// Allocate memory to data member name and get a copy from the provide 
+		/// </summary>
+		/// <param name="buffer"></param>
+		/// <returns></returns>
 		Patient& allocateCopyName(const char* buffer);
 	public:
 		Patient(int ticketNum);

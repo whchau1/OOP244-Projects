@@ -43,7 +43,7 @@ namespace seneca {
 
 		is >> hour;
 		if (is.peek() == ':') {
-			is.ignore();
+			is.ignore();  //Consume the ':'
 			is >> min;
 			m_mins = hour * 60 + min;
 		}
@@ -58,7 +58,7 @@ namespace seneca {
 		return m_mins;
 	}
 
-	Time& Time::operator*=(int val) {
+	Time& Time::operator*=(const int val) {
 		m_mins *= val;
 
 		return *this;
@@ -79,9 +79,8 @@ namespace seneca {
 		if (result < T.m_mins) {
 			result += 24 * 60;
 		}
-		result -= T.m_mins;
 
-		return Time(result);
+		return Time(result -= T.m_mins);
 	}
 
 	ostream& operator<<(ostream& os, const Time& time){
@@ -89,9 +88,7 @@ namespace seneca {
 	}
 
 	istream& operator>>(istream& is, Time& time){
-		time.read(is);
-
-		return is;
+		return time.read(is);
 	}
 
 }
