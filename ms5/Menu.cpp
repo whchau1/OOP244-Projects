@@ -24,44 +24,26 @@ namespace seneca{
 	}
 
 	int Menu::getSelection() const{
-		char buffer[10]{};
-		int noAlpha{}, noSpace{}, noInt{};
-		int selection = -1;
+		int selection{}, valid{};
+		char newLine{};
 		do {
-			noAlpha = noSpace = noInt = 0;
-			cin.getline(buffer, 10);
-			if (strlen(buffer) < 10) {
-				cin.putback('\n');
-			}
-			cin.clear();
-			cin.ignore(10000, '\n');
-			for (int i = 0; buffer[i] != '\0'; i++) {
-				if (isspace(buffer[i])) {
-					noSpace++;
-				}
-				else if (isalpha(buffer[i])) {
-					noAlpha++;
-				}
-				else if (isdigit(buffer[i])) {
-					noInt++;
-				}
-			}
-			if (noAlpha) {
+			cin >> selection;
+			cin.get(newLine);
+			if (cin.fail()) {
 				cout << "Bad integer value, try again: ";
+				cin.clear();
+				cin.ignore(1000, '\n');
 			}
-			else if ((noSpace && noInt) || noSpace) {
+			else if (newLine != '\n') {
 				cout << "Only enter an integer, try again: ";
 			}
-			else if (noInt) {
-				selection = 0;
-				for (int i = 0; buffer[i] != '\0'; i++) {
-					selection = selection * 10 + (buffer[i] - '0');
-				}
-				if (!(selection >= 0 && selection <= m_noOfOpt)) {
-					cout << "Invalid value enterd, retry[0 <= value <= " << m_noOfOpt << "]: ";
-				}
+			else if (!(selection >= 0 && selection <= m_noOfOpt)) {
+				cout << "Invalid value enterd, retry[0 <= value <= " << m_noOfOpt << "]: ";
 			}
-		} while (selection < 0 || selection > m_noOfOpt);
+			else {
+				valid = 1;
+			}
+		} while (!valid);
 
 		return selection;
 	}
@@ -70,9 +52,11 @@ namespace seneca{
 		if (menuContent) {
 			m_text = new char[strlen(menuContent) + 1];
 			strcpy(m_text, menuContent);
-			for (int i = 0; menuContent[i] != '\0'; i++)
-				if (menuContent[i] == '\n')
+			for (int i = 0; menuContent[i] != '\0'; i++) {
+				if (menuContent[i] == '\n') {
 					m_noOfOpt++;
+				}
+			}
 			m_noOfTab = numberOfTabs;
 		}
 	}

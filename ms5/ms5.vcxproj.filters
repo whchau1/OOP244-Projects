@@ -42,7 +42,7 @@
     <ClCompile Include="Menu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="ms55_test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

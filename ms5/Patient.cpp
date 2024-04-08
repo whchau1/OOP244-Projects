@@ -139,7 +139,7 @@ namespace seneca {
 			is.getline(buffer, MAX_PATIENT_NAME + 1, ',');
 			allocateCopyName(buffer);
 			is >> m_OHIP;
-			is.ignore();
+			is.ignore();  //ignore ','
 			m_ticket.read(is);
 		}
 		

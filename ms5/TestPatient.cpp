@@ -14,7 +14,7 @@ that my professor provided to complete my workshops and assignments.
 
 namespace seneca {
 
-	int TestPatient::m_nextTestTicket{ 1 };
+	static int m_nextTestTicket{ 1 };
 
 	TestPatient::TestPatient() :Patient(m_nextTestTicket++) {}
 

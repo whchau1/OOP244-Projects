@@ -17,7 +17,6 @@ that my professor provided to complete my workshops and assignments.
 namespace seneca {
 
 	class TestPatient :public Patient {
-		static int m_nextTestTicket;
 	public:
 		TestPatient();
 		virtual char type() const;

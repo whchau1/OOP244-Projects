@@ -19,7 +19,6 @@ namespace seneca {
 	const int MAX_SYMPTOMS_LEN = 511;
 
 	class TriagePatient :public Patient {
-		static int m_nextTriageTicket;
 		char* m_symptoms{};
 		TriagePatient& allocateCopyName(const char* buffer);
 	public:

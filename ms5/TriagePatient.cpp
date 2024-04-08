@@ -16,7 +16,7 @@ that my professor provided to complete my workshops and assignments.
 
 namespace seneca {
 
-	int TriagePatient::m_nextTriageTicket{ 1 };
+	static int m_nextTriageTicket{ 1 };
 
 	TriagePatient& TriagePatient::allocateCopyName(const char* buffer) {
 		if (buffer) {
@@ -68,7 +68,7 @@ namespace seneca {
 		Patient::read(in);
 		if (&in != &cin) {
 			in.ignore(1000, ',');
-			in.getline(symptoms, MAX_SYMPTOMS_LEN, '\n');
+			in.get(symptoms, MAX_SYMPTOMS_LEN, '\n');
 			allocateCopyName(symptoms);
 			m_nextTriageTicket = Patient::number() + 1;
 		}
