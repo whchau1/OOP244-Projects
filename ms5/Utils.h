@@ -49,6 +49,13 @@ namespace seneca {
       /// <returns> &gt;0 if s1 &gt; s2  OR  &lt;0 if s1 &lt; s2 OR 0 if s1 = s2</returns>
       int strcmp(const char* s1, const char* s2)const;
 
+      /// <summary>
+      /// Remove a Patient from the lineup when admitted.
+      /// </summary>
+      /// <typeparam name="type">- Type of the array</typeparam>
+      /// <param name="array">- Array</param>
+      /// <param name="index">- The index of the array to delete</param>
+      /// <param name="size">- The size of the array</param>
       template <typename type>
       void removeDynamicElement(type* array[], int index, int& size) {
           delete array[index];

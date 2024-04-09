@@ -26,7 +26,7 @@ namespace seneca {
 		return *this;
 	}
 
-	Patient::Patient(int ticketNum) :m_ticket(ticketNum) {}
+	Patient::Patient(const int ticketNum) :m_ticket(ticketNum) {}
 
 	Patient::Patient(const Patient& src) :m_ticket(0) {
 		operator=(src);
@@ -53,8 +53,10 @@ namespace seneca {
 		return type() == p2.type();
 	}
 
-	void Patient::setArrivalTime() {
+	Patient& Patient::setArrivalTime() {
 		m_ticket.resetTime();
+
+		return *this;
 	}
 
 	Time Patient::time() const {

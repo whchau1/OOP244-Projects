@@ -14,7 +14,7 @@ that my professor provided to complete my workshops and assignments.
 
 namespace seneca {
 
-	static int m_nextTestTicket{ 1 };
+	static int m_nextTestTicket{ 1 };  //Global variable share between TestPatient object only
 
 	TestPatient::TestPatient() :Patient(m_nextTestTicket++) {}
 

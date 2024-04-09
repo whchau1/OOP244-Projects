@@ -21,7 +21,7 @@ namespace seneca{
 		size_t m_mins{};  //Data member to store the time in min
 	public:
 		/// <summary>
-		/// Constructor initializes Time object with the giving number of minutes value
+		/// Constructor initializes Time object with the given number of minutes value
 		/// </summary>
 		/// <param name="min">- The value to initializes m_mins</param>
 		Time(unsigned int min = 0u);
@@ -59,7 +59,7 @@ namespace seneca{
 		/// <summary>
 		/// Multiplies the number of minutes held in the Time object by val
 		/// </summary>
-		/// <param name="val">- The giving value to multiple</param>
+		/// <param name="val">- The value to multiple</param>
 		/// <returns>A reference of the current object</returns>
 		Time& operator*= (const int val);
 
@@ -74,7 +74,7 @@ namespace seneca{
 		/// Calculates the time difference between the current Time object and the Time object T passed as an argument without changing the current object
 		/// </summary>
 		/// <param name="T">- The Time object to compare</param>
-		/// <returns>A copy of modified object</returns>
+		/// <returns>Modified object value</returns>
 		Time operator-(const Time& T)const;
 	};
 	/// <summary>

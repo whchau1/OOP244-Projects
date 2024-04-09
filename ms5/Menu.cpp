@@ -21,7 +21,6 @@ namespace seneca{
 		for (int i = 0; i < m_noOfTab; i++) {
 			cout << "   ";
 		}
-
 		return cout;
 	}
 
@@ -68,18 +67,16 @@ namespace seneca{
 	}
 
 	ostream& Menu::display() const{
-		printIndent();  //Print indentation for first line if any
+		printIndent();  //Print indentation for first line
 		for (int i = 0; m_text[i] != '\0'; i++) { //Check the menu content charater by charater.
 			cout << m_text[i];  //Print out the menu content by each character
-			if (m_text[i] == '\n') {  //Each newline print the indentation if any
+			if (m_text[i] == '\n') {  //Print the indentation when find a newline character
 				printIndent();
 			}
 		}
 		cout << endl;
-		printIndent();
-		cout << "0- Exit\n";
-		printIndent();
-		cout << "> ";
+		printIndent() << "0- Exit\n";
+		printIndent() << "> ";
 
 		return cout;
 	}

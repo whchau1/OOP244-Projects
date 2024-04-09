@@ -65,9 +65,7 @@ namespace seneca {
 	}
 
 	Time& Time::operator-=(const Time& D){
-		if (m_mins < D.m_mins) {
-			m_mins += 24 * 60;
-		}
+		m_mins < D.m_mins ? m_mins += 24 * 60 : m_mins;
 		m_mins -= D.m_mins;
 
 		return *this;
@@ -75,10 +73,7 @@ namespace seneca {
 
 	Time Time::operator-(const Time& T) const{
 		size_t result = m_mins;
-		
-		if (result < T.m_mins) {
-			result += 24 * 60;
-		}
+		result < T.m_mins ? result += 24 * 60 : result;
 
 		return Time(result -= T.m_mins);
 	}

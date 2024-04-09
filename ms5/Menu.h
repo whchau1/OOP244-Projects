@@ -23,9 +23,10 @@ namespace seneca {
 		int m_noOfTab{};  //Number of indentation tabs
 
 		/// <summary>
-		/// Print space based on the number of indentation
+		/// Print space based on the number of indentations
 		/// </summary>
-		void printIndent() const;
+		/// <returns>A reference of ostream</returns>
+		ostream& printIndent() const;
 
 		/// <summary>
 		/// Get the user input and validate it until the input passes. If user input is invalid, print the appropriate message
@@ -62,7 +63,7 @@ namespace seneca {
 		Menu& operator=(const Menu& menu) = delete;
 
 		/// <summary>
-		/// Display the menu content with indentation if any.
+		/// Display the menu content and display with indentation if any.
 		/// </summary>
 		/// <returns>ostream object</returns>
 		ostream& display() const;
