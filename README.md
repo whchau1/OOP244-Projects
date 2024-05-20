@@ -1,5 +1,6 @@
-# OOP244-Works
+# Projects
+# Contact Information:
 - Wing Ho Chau
 - Student No.: 150924231
 - Email ID: whchau1@myseneca.ca
-- OOP244NAA
+- Phone: 647-406-6613
